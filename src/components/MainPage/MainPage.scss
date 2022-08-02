@@ -1,4 +1,6 @@
 .MainPageContainer {
-  background-color: red;
-  grid-area: mainPage;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  height: 85vh;
 }
