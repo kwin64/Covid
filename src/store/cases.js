@@ -15,9 +15,9 @@ class Cases {
     try {
       const data = await countriesService.getCases();
       this.setCasesData(data);
-      console.log(data);
-      console.log(this.casesData.cases);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 export default new Cases();

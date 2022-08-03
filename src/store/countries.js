@@ -16,7 +16,6 @@ class Countries {
     try {
       const data = await countriesService.getDataCountries();
       this.setDataCountries(data);
-      console.log(data);
     } catch (error) {}
   }
 }

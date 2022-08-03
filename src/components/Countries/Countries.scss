@@ -1,6 +1,26 @@
 .CountriesContainer {
-  border: 0.1vh solid black;
-  border-radius: 5px;
   height: 72vh;
   margin-top: 1vh;
+  overflow: auto;
+  .CountryInfo {
+    padding: 10px;
+    margin: 2px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .CountryInfoCases {
+      font-size: 18px;
+      color: red;
+    }
+    .CountryInfoCountry {
+      text-align: center;
+      font-size: 20px;
+    }
+    .CountryInfoFlag {
+      width: 50px;
+    }
+  }
 }
