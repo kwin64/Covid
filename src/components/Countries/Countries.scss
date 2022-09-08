@@ -1,28 +1,39 @@
-.CountriesContainer {
-  height: 66vh;
-  margin-top: 1vh;
-  overflow: auto;
+.ContainerCountries {
+  height: 72.7vh;
+  position: relative;
 
-  .CountryInfo {
+  input {
+    // margin: 2px;
+    width: 100%;
+    margin-top: 20px;
     padding: 10px;
-    margin: 2px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+  }
 
-    .CountryInfoCases {
-      font-size: 18px;
-      color: red;
-    }
+  .ItemsCountries {
+    overflow: auto;
+    height: 88.5%;
+
     .CountryInfo {
-      text-align: center;
-      font-size: 20px;
-    }
-    .CountryFlag {
-      width: 50px;
-      box-shadow: 0 0 8px -4px rgb(0, 0, 0);
+      padding: 10px;
+      margin: 2px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      .CountryInfoCases {
+        font-size: 18px;
+        color: red;
+      }
+      .CountryInfo {
+        text-align: center;
+        font-size: 20px;
+      }
+      .CountryFlag {
+        width: 50px;
+        box-shadow: 0 0 8px -4px rgb(0, 0, 0);
+      }
     }
   }
 }

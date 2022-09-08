@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import countries from "../../store/countries";
 import "./Countries.scss";
 
@@ -19,7 +19,7 @@ export const Countries = observer((props) => {
   }, [countries.dataCountries, inputValue]);
 
   return (
-    <div className="CountriesContainer">
+    <div className="ContainerCountries">
       <input
         className="Input"
         type="text"
@@ -27,20 +27,22 @@ export const Countries = observer((props) => {
         placeholder="Find country"
         value={inputValue}
       />
-      {countries.dataCountries &&
-        filteredCountries.map((country) => {
-          return (
-            <div className="CountryInfo" key={country.id}>
-              <div className="CountryInfoCases">{country.cases}</div>
-              <div className="CountryInfo">{country.country}</div>
-              <img
-                className="CountryFlag"
-                src={country.countryInfo.flag}
-                alt={country.country}
-              />
-            </div>
-          );
-        })}
+      <div className="ItemsCountries">
+        {countries.dataCountries &&
+          filteredCountries.map((country) => {
+            return (
+              <div className="CountryInfo" key={country.id}>
+                <div className="CountryInfoCases">{country.cases}</div>
+                <div className="CountryInfo">{country.country}</div>
+                <img
+                  className="CountryFlag"
+                  src={country.countryInfo.flag}
+                  alt={country.country}
+                />
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 });
