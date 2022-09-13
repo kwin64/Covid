@@ -18,6 +18,9 @@ export const Countries = observer((props) => {
     );
   }, [countries.dataCountries, inputValue]);
 
+  const currentCountry = (country) => {
+    console.log(country);
+  };
   return (
     <div className="ContainerCountries">
       <input
@@ -31,7 +34,11 @@ export const Countries = observer((props) => {
         {countries.dataCountries &&
           filteredCountries.map((country) => {
             return (
-              <div className="CountryInfo" key={country.id}>
+              <div
+                className="CountryInfo"
+                key={country.id}
+                onClick={() => currentCountry(country.country)}
+              >
                 <div className="CountryInfoCases">{country.cases}</div>
                 <div className="CountryInfo">{country.country}</div>
                 <img

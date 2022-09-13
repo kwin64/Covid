@@ -6,6 +6,16 @@
 
   .HeaderTitle {
     font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    &:hover {
+      box-shadow: 0 0 8px -4px rgb(6, 6, 6);
+      border-radius: 10px;
+    }
   }
 
   .Card {

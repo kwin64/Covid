@@ -3,12 +3,17 @@ import countriesService from "../services/countries.services";
 
 class Cases {
   casesData = null;
+  currentCountryData = 'Belarus';
   constructor() {
     makeAutoObservable(this);
   }
 
   setCasesData(data) {
     this.casesData = data;
+  }
+
+  setCurrentCountryData(data) {
+    this.currentCountryData = data;
   }
 
   async fetchCasesData() {

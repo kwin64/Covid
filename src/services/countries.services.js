@@ -12,6 +12,12 @@ const getCases = async () => {
   const { data } = await axios.get(`${API_COVID_URL}/all`);
   return data;
 };
+
+const getDataCountry = async (country) => {
+  const { data } = await axios.get(`${API_COVID_URL}/countries/${country}`);
+  data.map((country) => (country.id = uuid()));
+  return data;
+};
 export default {
   getDataCountries,
   getCases,
