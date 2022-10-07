@@ -1,8 +1,7 @@
 import { observer } from "mobx-react-lite";
 import "./Header.scss";
-import cases from "../../store/cases";
 
-export const Header = observer(() => {
+export const Header = observer(({cases}) => {
   return (
     <div className="HeaderContainer">
       <div className="HeaderTitle">COVID-19 Dashboard</div>

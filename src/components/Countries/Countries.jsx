@@ -1,13 +1,10 @@
 import { observer } from "mobx-react-lite";
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import countries from "../../store/countries";
 import "./Countries.scss";
 
-export const Countries = observer((props) => {
+export const Countries = observer(({}) => {
   const [inputValue, setInputValue] = useState("");
-  useEffect(() => {
-    countries.fetchDataCountries();
-  }, []);
 
   const filteredCountries = useMemo(() => {
     if (!inputValue) {
@@ -18,8 +15,8 @@ export const Countries = observer((props) => {
     );
   }, [countries.dataCountries, inputValue]);
 
-  const currentCountry = (country) => {
-    console.log(country);
+  const currentCountry = async (country) => {
+    await countries.fetchDataCurrentCountry(country);
   };
   return (
     <div className="ContainerCountries">

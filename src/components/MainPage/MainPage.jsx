@@ -3,10 +3,10 @@ import { ListCountries } from "../ListCountries/ListCountries";
 import { CardCountries } from "../CardCountries/CardCountries";
 import { Statistics } from "../Statistics/Statistics";
 
-export const MainPage = (props) => {
+export const MainPage = ({currentCountry}) => {
   return (
     <div className="MainPageContainer">
-      <ListCountries />
+      <ListCountries currentCountry={currentCountry}/>
       <CardCountries />
       <Statistics />
     </div>
